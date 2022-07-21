@@ -1,0 +1,15 @@
+<div class="wrapper">
+    <button (click)="createBill()">Create Bill</button>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Bill Date</th>
+        </tr>
+        <tr *ngFor="let bill of bills">
+            <td>{{bill.id}}</td>
+            <td>{{bill.bill_date}}</td>
+            <button (click)="detailBill(bill.id)">Detail</button>
+        </tr>
+    </table>
+</div>

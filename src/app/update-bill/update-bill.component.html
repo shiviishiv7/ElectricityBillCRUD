@@ -1,0 +1,24 @@
+<div class="wrapper">
+    <div class="bill_date item">
+        <label for="bill_date">Bill Date</label>
+        <input type="date" datetime="yyyy-MM-dd" [(ngModel)]="bill.bill_date">
+    </div>
+
+    <div class="Paid_date item">
+        <label for="bill_date">Paid Date</label>
+        <input type="date" datetime="yyyy-MM-dd" [(ngModel)]="bill.paid_date">
+    </div>
+
+    <div class=" amount item">
+        <label for="amount">Amount</label>
+        <input type="text" [(ngModel)]="bill.amount">
+    </div>
+
+
+    <div class="unit item">
+        <label for="unit">Unit</label>
+        <input type="text" [(ngModel)]="bill.unit">
+    </div>
+
+    <button class="item" (click)="submit()" [disabled]="bill.unit==0 || bill.amount==0">Submit</button>
+</div>
